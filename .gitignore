@@ -1,0 +1,11 @@
+.satcat/
+__pycache__/
+*.egg-info/
+.venv/
+node_modules/
+dist/
+.pnpm-store/
+site/
+ui/*.png
+.env
+.env.*

@@ -1,0 +1,13 @@
+.pdf-ready {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #b8e72e;
+  font-size: 11px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pdf-ready:hover {
+  text-decoration: underline;
+}

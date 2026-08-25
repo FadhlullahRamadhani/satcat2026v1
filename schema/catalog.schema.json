@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/satellite-catalog.schema.json",
+  "title": "Satellite Catalog",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "summary", "scenes"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "source_root": {"type": "string"},
+    "summary": {"type": "object"},
+    "duplicate_groups": {"type": "array", "items": {"type": "array", "items": {"type": "string"}}},
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "path", "folder", "size_bytes", "signature"],
+        "properties": {
+          "id": {"type": "string"}, "name": {"type": "string"}, "path": {"type": "string"},
+          "folder": {"type": "string"}, "size_bytes": {"type": "integer"}, "signature": {"type": "string"},
+          "platform": {"type": ["string", "null"]}, "sensor": {"type": ["string", "null"]},
+          "processing_level": {"type": ["string", "null"]}, "acquired_at": {"type": ["string", "null"]},
+          "preview": {"type": "string"},
+          "preview_width": {"type": "integer", "minimum": 1},
+          "preview_height": {"type": "integer", "minimum": 1},
+          "crs": {"type": ["string", "null"]},
+          "bounds": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+          "footprint": {"type": "object"}
+        }
+      }
+    }
+  }
+}

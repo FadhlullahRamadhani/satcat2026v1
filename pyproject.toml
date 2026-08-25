@@ -1,0 +1,19 @@
+[project]
+name = "satellite-catalog-builder"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+geo = ["rasterio>=1.3", "Pillow>=10"]
+
+[project.scripts]
+satcat = "satellite_catalog.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
