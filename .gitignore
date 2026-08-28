@@ -7,5 +7,6 @@ dist/
 .pnpm-store/
 site/
 ui/*.png
+ui/catalog-backups/
 .env
 .env.*

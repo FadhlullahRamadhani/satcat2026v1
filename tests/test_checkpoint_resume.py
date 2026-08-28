@@ -4,10 +4,31 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from satellite_catalog.cli import build, iter_rasters
+from satellite_catalog.cli import build, iter_rasters, write_json_atomic
 
 
 class CheckpointResumeTest(unittest.TestCase):
+    def test_atomic_json_write_retries_a_transient_windows_lock(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory, "catalog.json")
+            real_replace = __import__("os").replace
+            attempts = 0
+
+            def locked_twice(source, destination):
+                nonlocal attempts
+                attempts += 1
+                if attempts < 3:
+                    raise PermissionError(5, "Access is denied")
+                return real_replace(source, destination)
+
+            with patch("satellite_catalog.cli.os.replace", side_effect=locked_twice), patch(
+                "satellite_catalog.cli.time.sleep"
+            ):
+                write_json_atomic(output, {"ok": True})
+
+            self.assertEqual(attempts, 3)
+            self.assertEqual(json.loads(output.read_text()), {"ok": True})
+
     def test_ecw_files_are_discovered_case_insensitively(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -1,23 +1,1585 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-25T10:14:57.668068+00:00",
-  "source_root": "",
-  "summary": {
-    "scene_count": 173,
-    "folder_count": 150,
-    "duplicate_group_count": 2
-  },
-  "duplicate_groups": [
-    [
-      "b482dd3d809ccf3b",
-      "ba011059d23970f8"
-    ],
-    [
-      "b38a7637014306c3",
-      "20d412b7d1b00369"
-    ]
+  "build_status": "complete",
+  "generated_at": "2026-08-28T08:36:54.858953+00:00",
+  "source_root": "Merged catalog",
+  "source_roots": [
+    "DATA DRONE KALTENG 2026",
+    "legacy-catalog"
   ],
+  "summary": {
+    "scene_count": 198,
+    "folder_count": 157,
+    "duplicate_group_count": 0
+  },
+  "duplicate_groups": [],
   "scenes": [
+    {
+      "id": "3ac793ccbf666c1e",
+      "name": "SVN3-02_20250922_L2D0000046502_01_9062500120310003-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_01_9062500120310003/SVN3-02_20250922_L2D0000046502_01_9062500120310003-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_01_9062500120310003",
+      "extension": ".tiff",
+      "size_bytes": 2992291080,
+      "modified_at": "2025-12-19T12:07:26+00:00",
+      "signature": "ef676c16e97d07139044ff6a8422885bd15173bc01ca4c0b8d9887d2148922cf",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 55415,
+      "height": 53992,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.521199,
+              -3.3712288
+            ],
+            [
+              114.521199,
+              -3.6152342
+            ],
+            [
+              114.7706357,
+              -3.6152342
+            ],
+            [
+              114.7706357,
+              -3.3712288
+            ],
+            [
+              114.521199,
+              -3.3712288
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        114.521199,
+        -3.6152342,
+        114.7706357,
+        -3.3712288
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/3ac793ccbf666c1e.jpg",
+      "preview_width": 4096,
+      "preview_height": 3991
+    },
+    {
+      "id": "ee73a754a4da91a7",
+      "name": "SVN3-02_20250922_L2D0000046502_01_9062500120310003-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_01_9062500120310003/SVN3-02_20250922_L2D0000046502_01_9062500120310003-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_01_9062500120310003",
+      "extension": ".tiff",
+      "size_bytes": 23833148929,
+      "modified_at": "2025-12-19T12:06:24+00:00",
+      "signature": "f53f2aaca027f241d579c571e108efac93bfc93178fde15c6f67f91c965ef8d5",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 55321,
+      "height": 53850,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 50S\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 50S\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",117,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",10000000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 114\u00b0E and 120\u00b0E, southern hemisphere between 80\u00b0S and equator, onshore and offshore. Australia. Indonesia.\"],\n        BBOX[-80,114,0,120]],\n    ID[\"EPSG\",32750]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.52184,
+              -3.3712311
+            ],
+            [
+              114.5212013,
+              -3.6145915
+            ],
+            [
+              114.7700596,
+              -3.6152397
+            ],
+            [
+              114.7706343,
+              -3.3718355
+            ],
+            [
+              114.52184,
+              -3.3712311
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        114.5212013,
+        -3.6152397,
+        114.7706343,
+        -3.3712311
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/ee73a754a4da91a7.jpg",
+      "preview_width": 4096,
+      "preview_height": 3987
+    },
+    {
+      "id": "f16ddc481e84cded",
+      "name": "SVN3-02_20250922_L2D0000046502_01_9062500120310003-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_01_9062500120310003/SVN3-02_20250922_L2D0000046502_01_9062500120310003-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_01_9062500120310003",
+      "extension": ".tiff",
+      "size_bytes": 2992291080,
+      "modified_at": "2025-12-19T12:08:28+00:00",
+      "signature": "e6f53c3e43218e7e15b5ef407ff1d138d5744d8b975e27032dc0121266475910",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 55415,
+      "height": 53992,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.521199,
+              -3.3712288
+            ],
+            [
+              114.521199,
+              -3.6152342
+            ],
+            [
+              114.7706357,
+              -3.6152342
+            ],
+            [
+              114.7706357,
+              -3.3712288
+            ],
+            [
+              114.521199,
+              -3.3712288
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        114.521199,
+        -3.6152342,
+        114.7706357,
+        -3.3712288
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/f16ddc481e84cded.jpg",
+      "preview_width": 4096,
+      "preview_height": 3991
+    },
+    {
+      "id": "8488c131ca3ef261",
+      "name": "SVN3-02_20250922_L2D0000046502_02_9062500120310002-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_02_9062500120310002/SVN3-02_20250922_L2D0000046502_02_9062500120310002-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_02_9062500120310002",
+      "extension": ".tiff",
+      "size_bytes": 186707332,
+      "modified_at": "2025-12-19T12:25:26+00:00",
+      "signature": "32560e1cf7cd052034cb36bcc96fe9bba78e22652b2a56fad2edced5808318b9",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 13857,
+      "height": 13468,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.7258123,
+              -3.4089137
+            ],
+            [
+              114.7258123,
+              -3.6523993
+            ],
+            [
+              114.9753383,
+              -3.6523993
+            ],
+            [
+              114.9753383,
+              -3.4089137
+            ],
+            [
+              114.7258123,
+              -3.4089137
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        114.7258123,
+        -3.6523993,
+        114.9753383,
+        -3.4089137
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/8488c131ca3ef261.jpg",
+      "preview_width": 4096,
+      "preview_height": 3981
+    },
+    {
+      "id": "a8cf904fb2ddb08a",
+      "name": "SVN3-02_20250922_L2D0000046502_02_9062500120310002-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_02_9062500120310002/SVN3-02_20250922_L2D0000046502_02_9062500120310002-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_02_9062500120310002",
+      "extension": ".tiff",
+      "size_bytes": 23785197194,
+      "modified_at": "2025-12-19T12:25:22+00:00",
+      "signature": "bcccbdc167e41e1916ff33826708c6ec2ac58da8df5bc575298804cd9d723a9e",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 55331,
+      "height": 53730,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 50S\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 50S\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",117,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",10000000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 114\u00b0E and 120\u00b0E, southern hemisphere between 80\u00b0S and equator, onshore and offshore. Australia. Indonesia.\"],\n        BBOX[-80,114,0,120]],\n    ID[\"EPSG\",32750]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.7264483,
+              -3.4089319
+            ],
+            [
+              114.7258573,
+              -3.6517861
+            ],
+            [
+              114.974806,
+              -3.6523841
+            ],
+            [
+              114.9753324,
+              -3.4094901
+            ],
+            [
+              114.7264483,
+              -3.4089319
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        114.7258573,
+        -3.6523841,
+        114.9753324,
+        -3.4089319
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/a8cf904fb2ddb08a.jpg",
+      "preview_width": 4096,
+      "preview_height": 3977
+    },
+    {
+      "id": "d6fd90676b76ba70",
+      "name": "SVN3-02_20250922_L2D0000046502_02_9062500120310002-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_02_9062500120310002/SVN3-02_20250922_L2D0000046502_02_9062500120310002-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250922_L2D0000046502_02_9062500120310002",
+      "extension": ".tiff",
+      "size_bytes": 186707332,
+      "modified_at": "2025-12-19T12:25:28+00:00",
+      "signature": "de05f8aaca414ee17a1589f5db47019c71eae963fb8d5e34eeb3274826ceac39",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 13857,
+      "height": 13468,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.7258123,
+              -3.4089137
+            ],
+            [
+              114.7258123,
+              -3.6523993
+            ],
+            [
+              114.9753383,
+              -3.6523993
+            ],
+            [
+              114.9753383,
+              -3.4089137
+            ],
+            [
+              114.7258123,
+              -3.4089137
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        114.7258123,
+        -3.6523993,
+        114.9753383,
+        -3.4089137
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/d6fd90676b76ba70.jpg",
+      "preview_width": 4096,
+      "preview_height": 3981
+    },
+    {
+      "id": "7844ed9c9dc0fd72",
+      "name": "SVN3-02_20250930_L2D0000049002_03_9062500120390003-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_03_9062500120390003/SVN3-02_20250930_L2D0000049002_03_9062500120390003-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_03_9062500120390003",
+      "extension": ".tiff",
+      "size_bytes": 1878632167,
+      "modified_at": "2025-12-17T16:25:52+00:00",
+      "signature": "25b3788a4ebe6426b1ed7aaa6a96704bff84f0f09b91901f297921aec59f9509",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 36861,
+      "height": 50957,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.1715218,
+              -1.301551
+            ],
+            [
+              113.1715218,
+              -1.5318925
+            ],
+            [
+              113.3370988,
+              -1.5318925
+            ],
+            [
+              113.3370988,
+              -1.301551
+            ],
+            [
+              113.1715218,
+              -1.301551
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.1715218,
+        -1.5318925,
+        113.3370988,
+        -1.301551
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/7844ed9c9dc0fd72.jpg",
+      "preview_width": 2963,
+      "preview_height": 4096
+    },
+    {
+      "id": "09ffb182b204753b",
+      "name": "SVN3-02_20250930_L2D0000049002_03_9062500120390003-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_03_9062500120390003/SVN3-02_20250930_L2D0000049002_03_9062500120390003-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_03_9062500120390003",
+      "extension": ".tiff",
+      "size_bytes": 14999472025,
+      "modified_at": "2025-12-17T16:25:24+00:00",
+      "signature": "6dd98ac2a6f5bf8d2dbd964894d0afe48ab90b05fc78acdd5ee91a74ee3bcb1a",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 36817,
+      "height": 50923,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 49S\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 49S\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",111,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",10000000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 108\u00b0E and 114\u00b0E, southern hemisphere between 80\u00b0S and equator, onshore and offshore. Australia. Indonesia.\"],\n        BBOX[-80,108,0,114]],\n    ID[\"EPSG\",32749]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.171524,
+              -1.3017021
+            ],
+            [
+              113.1717385,
+              -1.5318923
+            ],
+            [
+              113.3371008,
+              -1.5317172
+            ],
+            [
+              113.33687,
+              -1.3015533
+            ],
+            [
+              113.171524,
+              -1.3017021
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.171524,
+        -1.5318923,
+        113.3371008,
+        -1.3015533
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/09ffb182b204753b.jpg",
+      "preview_width": 2961,
+      "preview_height": 4096
+    },
+    {
+      "id": "aab8270f07df58e4",
+      "name": "SVN3-02_20250930_L2D0000049002_03_9062500120390003-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_03_9062500120390003/SVN3-02_20250930_L2D0000049002_03_9062500120390003-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_03_9062500120390003",
+      "extension": ".tiff",
+      "size_bytes": 1878632167,
+      "modified_at": "2025-12-17T16:19:44+00:00",
+      "signature": "94eed262e573cdecafdaaa7a94edef9f82893e712311e8aa712682af5cb209c7",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 36861,
+      "height": 50957,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.1715218,
+              -1.301551
+            ],
+            [
+              113.1715218,
+              -1.5318925
+            ],
+            [
+              113.3370988,
+              -1.5318925
+            ],
+            [
+              113.3370988,
+              -1.301551
+            ],
+            [
+              113.1715218,
+              -1.301551
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.1715218,
+        -1.5318925,
+        113.3370988,
+        -1.301551
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/aab8270f07df58e4.jpg",
+      "preview_width": 2963,
+      "preview_height": 4096
+    },
+    {
+      "id": "cf00ffcf92914fd2",
+      "name": "SVN3-02_20250930_L2D0000049002_04_9062500120390002-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_04_9062500120390002/SVN3-02_20250930_L2D0000049002_04_9062500120390002-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_04_9062500120390002",
+      "extension": ".tiff",
+      "size_bytes": 2895575221,
+      "modified_at": "2025-12-17T16:37:04+00:00",
+      "signature": "8ec2b04a600b4d4229e835effda3915687f6b163356f374214ae9b682b34a4bc",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 53293,
+      "height": 54327,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.2927583,
+              -1.3253901
+            ],
+            [
+              113.2927583,
+              -1.5709448
+            ],
+            [
+              113.5321238,
+              -1.5709448
+            ],
+            [
+              113.5321238,
+              -1.3253901
+            ],
+            [
+              113.2927583,
+              -1.3253901
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.2927583,
+        -1.5709448,
+        113.5321238,
+        -1.3253901
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/cf00ffcf92914fd2.jpg",
+      "preview_width": 4018,
+      "preview_height": 4096
+    },
+    {
+      "id": "babc1062421d1a1e",
+      "name": "SVN3-02_20250930_L2D0000049002_04_9062500120390002-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_04_9062500120390002/SVN3-02_20250930_L2D0000049002_04_9062500120390002-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_04_9062500120390002",
+      "extension": ".tiff",
+      "size_bytes": 23119413729,
+      "modified_at": "2025-12-17T16:36:22+00:00",
+      "signature": "9ca336ed3c260adf675b6fa3078073c6a1aa6fee9f722f2dcdb1e34b14024224",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 53244,
+      "height": 54275,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 49S\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 49S\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",111,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",10000000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 108\u00b0E and 114\u00b0E, southern hemisphere between 80\u00b0S and equator, onshore and offshore. Australia. Indonesia.\"],\n        BBOX[-80,108,0,114]],\n    ID[\"EPSG\",32749]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.2927605,
+              -1.3256268
+            ],
+            [
+              113.2930072,
+              -1.5709489
+            ],
+            [
+              113.532128,
+              -1.5706709
+            ],
+            [
+              113.5318556,
+              -1.3253923
+            ],
+            [
+              113.2927605,
+              -1.3256268
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.2927605,
+        -1.5709489,
+        113.532128,
+        -1.3253923
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/babc1062421d1a1e.jpg",
+      "preview_width": 4018,
+      "preview_height": 4096
+    },
+    {
+      "id": "b6d1ab0c9d5465e1",
+      "name": "SVN3-02_20250930_L2D0000049002_04_9062500120390002-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_04_9062500120390002/SVN3-02_20250930_L2D0000049002_04_9062500120390002-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_04_9062500120390002",
+      "extension": ".tiff",
+      "size_bytes": 2895575221,
+      "modified_at": "2025-12-17T16:37:44+00:00",
+      "signature": "b450e9fc429448d23e1922a0727b4d0dd4e4b325f62dd654eaa6af9fd17850c2",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 53293,
+      "height": 54327,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.2927583,
+              -1.3253901
+            ],
+            [
+              113.2927583,
+              -1.5709448
+            ],
+            [
+              113.5321238,
+              -1.5709448
+            ],
+            [
+              113.5321238,
+              -1.3253901
+            ],
+            [
+              113.2927583,
+              -1.3253901
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.2927583,
+        -1.5709448,
+        113.5321238,
+        -1.3253901
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/b6d1ab0c9d5465e1.jpg",
+      "preview_width": 4018,
+      "preview_height": 4096
+    },
+    {
+      "id": "fc6c8933826747a9",
+      "name": "SVN3-02_20250930_L2D0000049002_05_9062500120390001-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_05_9062500120390001/SVN3-02_20250930_L2D0000049002_05_9062500120390001-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_05_9062500120390001",
+      "extension": ".tiff",
+      "size_bytes": 2609923804,
+      "modified_at": "2025-12-17T16:47:14+00:00",
+      "signature": "a960721b12b7df7f27c3c24aee8682cd90cb46568127d5a8c15342122902022f",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 47982,
+      "height": 54387,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.4877496,
+              -1.3643479
+            ],
+            [
+              113.4877496,
+              -1.6101386
+            ],
+            [
+              113.7032335,
+              -1.6101386
+            ],
+            [
+              113.7032335,
+              -1.3643479
+            ],
+            [
+              113.4877496,
+              -1.3643479
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.4877496,
+        -1.6101386,
+        113.7032335,
+        -1.3643479
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/fc6c8933826747a9.jpg",
+      "preview_width": 3614,
+      "preview_height": 4096
+    },
+    {
+      "id": "edd691a7b641baf5",
+      "name": "SVN3-02_20250930_L2D0000049002_05_9062500120390001-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_05_9062500120390001/SVN3-02_20250930_L2D0000049002_05_9062500120390001-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_05_9062500120390001",
+      "extension": ".tiff",
+      "size_bytes": 20833343569,
+      "modified_at": "2025-12-17T16:46:34+00:00",
+      "signature": "a24b72f7708d4e4d150c79c1d9c6568852ee09658d18901e0496ce83bae08fe8",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 47926,
+      "height": 54335,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 49S\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 49S\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",111,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",10000000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 108\u00b0E and 114\u00b0E, southern hemisphere between 80\u00b0S and equator, onshore and offshore. Australia. Indonesia.\"],\n        BBOX[-80,108,0,114]],\n    ID[\"EPSG\",32749]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.4877519,
+              -1.3645839
+            ],
+            [
+              113.4880271,
+              -1.6101419
+            ],
+            [
+              113.7032383,
+              -1.609866
+            ],
+            [
+              113.7029394,
+              -1.3643501
+            ],
+            [
+              113.4877519,
+              -1.3645839
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.4877519,
+        -1.6101419,
+        113.7032383,
+        -1.3643501
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/edd691a7b641baf5.jpg",
+      "preview_width": 3613,
+      "preview_height": 4096
+    },
+    {
+      "id": "5fe158788c516288",
+      "name": "SVN3-02_20250930_L2D0000049002_05_9062500120390001-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_05_9062500120390001/SVN3-02_20250930_L2D0000049002_05_9062500120390001-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20250930_L2D0000049002_05_9062500120390001",
+      "extension": ".tiff",
+      "size_bytes": 2609923804,
+      "modified_at": "2025-12-17T16:47:54+00:00",
+      "signature": "5a4feed9a73929051e7534c8502ce562e78ea21bcf7a6f6211f5abe6068537e0",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 47982,
+      "height": 54387,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.4877496,
+              -1.3643479
+            ],
+            [
+              113.4877496,
+              -1.6101386
+            ],
+            [
+              113.7032335,
+              -1.6101386
+            ],
+            [
+              113.7032335,
+              -1.3643479
+            ],
+            [
+              113.4877496,
+              -1.3643479
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        113.4877496,
+        -1.6101386,
+        113.7032335,
+        -1.3643479
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/5fe158788c516288.jpg",
+      "preview_width": 3614,
+      "preview_height": 4096
+    },
+    {
+      "id": "c768d852ced4d8bf",
+      "name": "SVN3-02_20251008_L2D0000051218_03_9062500120710005-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051218_03_9062500120710005/SVN3-02_20251008_L2D0000051218_03_9062500120710005-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051218_03_9062500120710005",
+      "extension": ".tiff",
+      "size_bytes": 2636100880,
+      "modified_at": "2025-12-20T05:42:08+00:00",
+      "signature": "94946d577cbb4d4de57b5393dc74ae76f70663a1b5f055549da9356e1958b872",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 53418,
+      "height": 49343,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.6985525,
+              1.0268442
+            ],
+            [
+              111.6985525,
+              0.8036481
+            ],
+            [
+              111.9387717,
+              0.8036481
+            ],
+            [
+              111.9387717,
+              1.0268442
+            ],
+            [
+              111.6985525,
+              1.0268442
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.6985525,
+        0.8036481,
+        111.9387717,
+        1.0268442
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/c768d852ced4d8bf.jpg",
+      "preview_width": 4096,
+      "preview_height": 3784
+    },
+    {
+      "id": "661c97213c4661d1",
+      "name": "SVN3-02_20251008_L2D0000051218_03_9062500120710005-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051218_03_9062500120710005/SVN3-02_20251008_L2D0000051218_03_9062500120710005-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051218_03_9062500120710005",
+      "extension": ".tiff",
+      "size_bytes": 21094791329,
+      "modified_at": "2025-12-20T05:50:34+00:00",
+      "signature": "6badb24d01a8f9b8a16545f6ad9fefa268b86442a108a43e2d4e03cc6e250f59",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 53448,
+      "height": 49333,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 49N\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 49N\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",111,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 108\u00b0E and 114\u00b0E, northern hemisphere between equator and 84\u00b0N, onshore and offshore. China. Hong Kong. Indonesia. Macao. Malaysia - East Malaysia - Sarawak. Mongolia. Russian Federation. Vietnam.\"],\n        BBOX[0,108,84,114]],\n    ID[\"EPSG\",32649]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.698598,
+              1.0268419
+            ],
+            [
+              111.6985548,
+              0.8036936
+            ],
+            [
+              111.9387152,
+              0.8036452
+            ],
+            [
+              111.9387733,
+              1.02678
+            ],
+            [
+              111.698598,
+              1.0268419
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.6985548,
+        0.8036452,
+        111.9387733,
+        1.0268419
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/661c97213c4661d1.jpg",
+      "preview_width": 4096,
+      "preview_height": 3781
+    },
+    {
+      "id": "343ec06d44f8c36b",
+      "name": "SVN3-02_20251008_L2D0000051218_03_9062500120710005-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051218_03_9062500120710005/SVN3-02_20251008_L2D0000051218_03_9062500120710005-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051218_03_9062500120710005",
+      "extension": ".tiff",
+      "size_bytes": 2636100880,
+      "modified_at": "2025-12-20T05:51:22+00:00",
+      "signature": "71c598a74a1411563e195b8b86c8c981cac6880459ae66bcc43c14f4981e0c5b",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 53418,
+      "height": 49343,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.6985525,
+              1.0268442
+            ],
+            [
+              111.6985525,
+              0.8036481
+            ],
+            [
+              111.9387717,
+              0.8036481
+            ],
+            [
+              111.9387717,
+              1.0268442
+            ],
+            [
+              111.6985525,
+              1.0268442
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.6985525,
+        0.8036481,
+        111.9387717,
+        1.0268442
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/343ec06d44f8c36b.jpg",
+      "preview_width": 4096,
+      "preview_height": 3784
+    },
+    {
+      "id": "130d9a53fd0acdf0",
+      "name": "SVN3-02_20251008_L2D0000051219_01_9062500120710004-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_01_9062500120710004/SVN3-02_20251008_L2D0000051219_01_9062500120710004-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_01_9062500120710004",
+      "extension": ".tiff",
+      "size_bytes": 2754137022,
+      "modified_at": "2025-12-20T06:04:04+00:00",
+      "signature": "20fec001e252934557beab99326d3b78804a4b562f9d3925f9803090360c887b",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 52217,
+      "height": 52738,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.2788449,
+              0.9437019
+            ],
+            [
+              111.2788449,
+              0.7051336
+            ],
+            [
+              111.5136756,
+              0.7051336
+            ],
+            [
+              111.5136756,
+              0.9437019
+            ],
+            [
+              111.2788449,
+              0.9437019
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.2788449,
+        0.7051336,
+        111.5136756,
+        0.9437019
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/130d9a53fd0acdf0.jpg",
+      "preview_width": 4056,
+      "preview_height": 4096
+    },
+    {
+      "id": "082ea54bcbf3d7a9",
+      "name": "SVN3-02_20251008_L2D0000051219_01_9062500120710004-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_01_9062500120710004/SVN3-02_20251008_L2D0000051219_01_9062500120710004-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_01_9062500120710004",
+      "extension": ".tiff",
+      "size_bytes": 22044500017,
+      "modified_at": "2025-12-20T06:02:34+00:00",
+      "signature": "721ebcd1445b65c21bd13d23accce30aa9edb729d086fd54196dca68a4040e38",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 52252,
+      "height": 52734,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 49N\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 49N\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",111,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 108\u00b0E and 114\u00b0E, northern hemisphere between equator and 84\u00b0N, onshore and offshore. China. Hong Kong. Indonesia. Macao. Malaysia - East Malaysia - Sarawak. Mongolia. Russian Federation. Vietnam.\"],\n        BBOX[0,108,84,114]],\n    ID[\"EPSG\",32649]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.2788638,
+              0.9436996
+            ],
+            [
+              111.2788472,
+              0.7051524
+            ],
+            [
+              111.5136468,
+              0.7051323
+            ],
+            [
+              111.5136774,
+              0.9436727
+            ],
+            [
+              111.2788638,
+              0.9436996
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.2788472,
+        0.7051323,
+        111.5136774,
+        0.9436996
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/082ea54bcbf3d7a9.jpg",
+      "preview_width": 4059,
+      "preview_height": 4096
+    },
+    {
+      "id": "762233332222fd11",
+      "name": "SVN3-02_20251008_L2D0000051219_01_9062500120710004-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_01_9062500120710004/SVN3-02_20251008_L2D0000051219_01_9062500120710004-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_01_9062500120710004",
+      "extension": ".tiff",
+      "size_bytes": 2754137022,
+      "modified_at": "2025-12-20T06:03:20+00:00",
+      "signature": "4673d5506eb37c43b074093f6f5bebe4ceadacc2260d11435c659afcb42db0b1",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 52217,
+      "height": 52738,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.2788449,
+              0.9437019
+            ],
+            [
+              111.2788449,
+              0.7051336
+            ],
+            [
+              111.5136756,
+              0.7051336
+            ],
+            [
+              111.5136756,
+              0.9437019
+            ],
+            [
+              111.2788449,
+              0.9437019
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.2788449,
+        0.7051336,
+        111.5136756,
+        0.9437019
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/762233332222fd11.jpg",
+      "preview_width": 4056,
+      "preview_height": 4096
+    },
+    {
+      "id": "0e5aa40a1e12d695",
+      "name": "SVN3-02_20251008_L2D0000051219_02_9062500120710003-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_02_9062500120710003/SVN3-02_20251008_L2D0000051219_02_9062500120710003-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_02_9062500120710003",
+      "extension": ".tiff",
+      "size_bytes": 179854192,
+      "modified_at": "2025-12-20T06:16:02+00:00",
+      "signature": "e12d431fbb2adb1bc9d8aa99e06ab1c2415a0a52e88b79283f85964307042684",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 13203,
+      "height": 13616,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.4697544,
+              0.9112229
+            ],
+            [
+              111.4697544,
+              0.6648656
+            ],
+            [
+              111.7072385,
+              0.6648656
+            ],
+            [
+              111.7072385,
+              0.9112229
+            ],
+            [
+              111.4697544,
+              0.9112229
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.4697544,
+        0.6648656,
+        111.7072385,
+        0.9112229
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/0e5aa40a1e12d695.jpg",
+      "preview_width": 3972,
+      "preview_height": 4096
+    },
+    {
+      "id": "d187fbb428021a53",
+      "name": "SVN3-02_20251008_L2D0000051219_02_9062500120710003-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_02_9062500120710003/SVN3-02_20251008_L2D0000051219_02_9062500120710003-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_02_9062500120710003",
+      "extension": ".tiff",
+      "size_bytes": 23017091906,
+      "modified_at": "2025-12-20T06:16:00+00:00",
+      "signature": "5d49ec81e82d1bbc1e502a9582f0e758934b4f7033615ccbac1613b0fa7dd425",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 52835,
+      "height": 54451,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 49N\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 49N\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",111,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 108\u00b0E and 114\u00b0E, northern hemisphere between equator and 84\u00b0N, onshore and offshore. China. Hong Kong. Indonesia. Macao. Malaysia - East Malaysia - Sarawak. Mongolia. Russian Federation. Vietnam.\"],\n        BBOX[0,108,84,114]],\n    ID[\"EPSG\",32649]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.469827,
+              0.9112048
+            ],
+            [
+              111.4697994,
+              0.6648959
+            ],
+            [
+              111.7072099,
+              0.6648675
+            ],
+            [
+              111.7072514,
+              0.9111657
+            ],
+            [
+              111.469827,
+              0.9112048
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.4697994,
+        0.6648675,
+        111.7072514,
+        0.9112048
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/d187fbb428021a53.jpg",
+      "preview_width": 3974,
+      "preview_height": 4096
+    },
+    {
+      "id": "55956eb0abf63a9d",
+      "name": "SVN3-02_20251008_L2D0000051219_02_9062500120710003-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_02_9062500120710003/SVN3-02_20251008_L2D0000051219_02_9062500120710003-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_02_9062500120710003",
+      "extension": ".tiff",
+      "size_bytes": 179854192,
+      "modified_at": "2025-12-20T06:16:06+00:00",
+      "signature": "04990375c585181930d47acc479111988924de7446b25b27dc062d8566dc30f7",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 13203,
+      "height": 13616,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.4697544,
+              0.9112229
+            ],
+            [
+              111.4697544,
+              0.6648656
+            ],
+            [
+              111.7072385,
+              0.6648656
+            ],
+            [
+              111.7072385,
+              0.9112229
+            ],
+            [
+              111.4697544,
+              0.9112229
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.4697544,
+        0.6648656,
+        111.7072385,
+        0.9112229
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/55956eb0abf63a9d.jpg",
+      "preview_width": 3972,
+      "preview_height": 4096
+    },
+    {
+      "id": "e513c8b00dae909b",
+      "name": "SVN3-02_20251008_L2D0000051219_03_9062500120710002-Cloud",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_03_9062500120710002/SVN3-02_20251008_L2D0000051219_03_9062500120710002-Cloud.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_03_9062500120710002",
+      "extension": ".tiff",
+      "size_bytes": 2479728832,
+      "modified_at": "2025-12-20T06:19:40+00:00",
+      "signature": "463b816f573c88cfc19322b4a6176fcb668b97602ef621aa4cb83bff410827d4",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 53418,
+      "height": 46416,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.6633206,
+              0.8709549
+            ],
+            [
+              111.6633206,
+              0.6609972
+            ],
+            [
+              111.903531,
+              0.6609972
+            ],
+            [
+              111.903531,
+              0.8709549
+            ],
+            [
+              111.6633206,
+              0.8709549
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.6633206,
+        0.6609972,
+        111.903531,
+        0.8709549
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/e513c8b00dae909b.jpg",
+      "preview_width": 4096,
+      "preview_height": 3559
+    },
+    {
+      "id": "0cd9c64f010e5cc4",
+      "name": "SVN3-02_20251008_L2D0000051219_03_9062500120710002-FUS",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_03_9062500120710002/SVN3-02_20251008_L2D0000051219_03_9062500120710002-FUS.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_03_9062500120710002",
+      "extension": ".tiff",
+      "size_bytes": 19844803857,
+      "modified_at": "2025-12-20T06:27:18+00:00",
+      "signature": "69307a9af6289d0ea796c9a7c793534ec10813633c3efcdc425b0c0a6b426a61",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": "FUS",
+      "metadata_status": "geospatial",
+      "width": 53450,
+      "height": 46408,
+      "band_count": 4,
+      "dtype": "UInt16",
+      "crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 49N\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 49N\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",111,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 108\u00b0E and 114\u00b0E, northern hemisphere between equator and 84\u00b0N, onshore and offshore. China. Hong Kong. Indonesia. Macao. Malaysia - East Malaysia - Sarawak. Mongolia. Russian Federation. Vietnam.\"],\n        BBOX[0,108,84,114]],\n    ID[\"EPSG\",32649]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.6633551,
+              0.8709526
+            ],
+            [
+              111.6633228,
+              0.6610333
+            ],
+            [
+              111.9034867,
+              0.6609951
+            ],
+            [
+              111.9035307,
+              0.8709023
+            ],
+            [
+              111.6633551,
+              0.8709526
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.6633228,
+        0.6609951,
+        111.9035307,
+        0.8709526
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/0cd9c64f010e5cc4.jpg",
+      "preview_width": 4096,
+      "preview_height": 3556
+    },
+    {
+      "id": "26db6eae758a058e",
+      "name": "SVN3-02_20251008_L2D0000051219_03_9062500120710002-Snow",
+      "path": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_03_9062500120710002/SVN3-02_20251008_L2D0000051219_03_9062500120710002-Snow.tiff",
+      "folder": "SUPERVIEW-NEO/L2D/SVN3-02_20251008_L2D0000051219_03_9062500120710002",
+      "extension": ".tiff",
+      "size_bytes": 2479728832,
+      "modified_at": "2025-12-20T06:19:00+00:00",
+      "signature": "a88dbc378986b1f8614b3827c7435146a9668af2a747866df452fe0e0c159611",
+      "platform": "SVN3",
+      "sensor": null,
+      "processing_level": null,
+      "acquired_at": null,
+      "product": null,
+      "metadata_status": "geospatial",
+      "width": 53418,
+      "height": 46416,
+      "band_count": 1,
+      "dtype": "Byte",
+      "crs_wkt": "GEOGCRS[\"WGS 84\",\n    ENSEMBLE[\"World Geodetic System 1984 ensemble\",\n        MEMBER[\"World Geodetic System 1984 (Transit)\"],\n        MEMBER[\"World Geodetic System 1984 (G730)\"],\n        MEMBER[\"World Geodetic System 1984 (G873)\"],\n        MEMBER[\"World Geodetic System 1984 (G1150)\"],\n        MEMBER[\"World Geodetic System 1984 (G1674)\"],\n        MEMBER[\"World Geodetic System 1984 (G1762)\"],\n        MEMBER[\"World Geodetic System 1984 (G2139)\"],\n        MEMBER[\"World Geodetic System 1984 (G2296)\"],\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]],\n        ENSEMBLEACCURACY[2.0]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"geodetic latitude (Lat)\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"geodetic longitude (Lon)\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    USAGE[\n        SCOPE[\"Horizontal component of 3D system.\"],\n        AREA[\"World.\"],\n        BBOX[-90,-180,90,180]],\n    ID[\"EPSG\",4326]]",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.6633206,
+              0.8709549
+            ],
+            [
+              111.6633206,
+              0.6609972
+            ],
+            [
+              111.903531,
+              0.6609972
+            ],
+            [
+              111.903531,
+              0.8709549
+            ],
+            [
+              111.6633206,
+              0.8709549
+            ]
+          ]
+        ]
+      },
+      "footprint_crs": "EPSG:4326",
+      "bounds": [
+        111.6633206,
+        0.6609972,
+        111.903531,
+        0.8709549
+      ],
+      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/26db6eae758a058e.jpg",
+      "preview_width": 4096,
+      "preview_height": 3559
+    },
     {
       "id": "0be1d04780afd779",
       "name": "BJ3A1_PAN1_20250729031315_L2_106049_SC_003_1121251217004001_001-FUS",
@@ -8081,64 +9643,6 @@
       "preview_height": 4096
     },
     {
-      "id": "ba011059d23970f8",
-      "name": "zy303a_mux_026578_890223_20250508110234_01_sec_0004_2505132334",
-      "path": "ZIYUAN-3/SC/zy303a_026578_890223_20250508110234_01_sec/zy303a_mux_026578_890223_20250508110234_01_sec_0004_2505132334/zy303a_mux_026578_890223_20250508110234_01_sec_0004_2505132334.tif",
-      "folder": "ZIYUAN-3/SC/zy303a_026578_890223_20250508110234_01_sec/zy303a_mux_026578_890223_20250508110234_01_sec_0004_2505132334",
-      "extension": ".tif",
-      "size_bytes": 674818092,
-      "modified_at": "2026-02-02T23:31:20+00:00",
-      "signature": "2764ffee02b04a84b9d39c615d8d2e67ff9460cba56f9d0b195c6ba670227819",
-      "platform": "ZY303A",
-      "sensor": "MUX",
-      "processing_level": null,
-      "acquired_at": "2025-05-08T11:02:34+00:00",
-      "product": null,
-      "metadata_status": "geospatial",
-      "crs": null,
-      "width": 8816,
-      "height": 9567,
-      "band_count": 4,
-      "dtype": "uint16",
-      "nodata": null,
-      "bounds": [
-        0.0,
-        9567.0,
-        8816.0,
-        0.0
-      ],
-      "footprint": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              0.0,
-              9567.0
-            ],
-            [
-              8816.0,
-              9567.0
-            ],
-            [
-              8816.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              9567.0
-            ]
-          ]
-        ]
-      },
-      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/ba011059d23970f8.jpg",
-      "preview_width": 3774,
-      "preview_height": 4096
-    },
-    {
       "id": "b38a7637014306c3",
       "name": "zy303a_nad_026578_890223_20250508110234_01_sec_0001_2505121376",
       "path": "ZIYUAN-3/SC/zy303a_026578_890223_20250508110234_01_sec/zy303a_nad_026578_890223_20250508110234_01_sec_0001_2505121376/zy303a_nad_026578_890223_20250508110234_01_sec_0001_2505121376.tif",
@@ -8193,64 +9697,6 @@
         ]
       },
       "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/b38a7637014306c3.jpg",
-      "preview_width": 3819,
-      "preview_height": 4096
-    },
-    {
-      "id": "20d412b7d1b00369",
-      "name": "zy303a_nad_026578_890223_20250508110234_01_sec_0001_2505132334",
-      "path": "ZIYUAN-3/SC/zy303a_026578_890223_20250508110234_01_sec/zy303a_nad_026578_890223_20250508110234_01_sec_0001_2505132334/zy303a_nad_026578_890223_20250508110234_01_sec_0001_2505132334.tif",
-      "folder": "ZIYUAN-3/SC/zy303a_026578_890223_20250508110234_01_sec/zy303a_nad_026578_890223_20250508110234_01_sec_0001_2505132334",
-      "extension": ".tif",
-      "size_bytes": 1289457906,
-      "modified_at": "2026-02-02T23:56:14+00:00",
-      "signature": "60a94497c1d4bed90f84f744632eb78187728287d8d7bc935312bee2cb935cc0",
-      "platform": "ZY303A",
-      "sensor": null,
-      "processing_level": null,
-      "acquired_at": "2025-05-08T11:02:34+00:00",
-      "product": null,
-      "metadata_status": "geospatial",
-      "crs": null,
-      "width": 24516,
-      "height": 26294,
-      "band_count": 1,
-      "dtype": "uint16",
-      "nodata": null,
-      "bounds": [
-        0.0,
-        26294.0,
-        24516.0,
-        0.0
-      ],
-      "footprint": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              0.0,
-              26294.0
-            ],
-            [
-              24516.0,
-              26294.0
-            ],
-            [
-              24516.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              26294.0
-            ]
-          ]
-        ]
-      },
-      "preview": "C:/Users/pchpdani/Documents/codexprojects/satellitecatalogues/ui/public/previews/20d412b7d1b00369.jpg",
       "preview_width": 3819,
       "preview_height": 4096
     },

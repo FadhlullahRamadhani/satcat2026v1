@@ -5,6 +5,8 @@ import hashlib
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 import threading
 import time
@@ -49,12 +51,27 @@ def heartbeat(label: str, interval: int = 180):
         progress(f"{state}: {label} ({elapsed:.1f}s)")
 
 
-def write_json_atomic(path: Path, value: object) -> None:
-    """Replace a JSON file atomically so cancellation cannot corrupt the last checkpoint."""
+def write_json_atomic(path: Path, value: object, retries: int = 12, retry_delay: float = 0.25) -> None:
+    """Replace JSON atomically, retrying Windows antivirus/server file locks."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_name(f"{path.name}.tmp")
+    temporary = path.with_name(f".{path.name}.{os.getpid()}.{threading.get_ident()}.tmp")
     temporary.write_text(json.dumps(value, indent=2), "utf-8")
-    os.replace(temporary, path)
+    try:
+        for attempt in range(retries + 1):
+            try:
+                os.replace(temporary, path)
+                return
+            except PermissionError:
+                if attempt >= retries:
+                    raise
+                if attempt == 0:
+                    progress(f"Output file is temporarily locked; retrying: {path}")
+                time.sleep(min(retry_delay * (2 ** attempt), 2.0))
+    finally:
+        try:
+            temporary.unlink(missing_ok=True)
+        except PermissionError:
+            pass
 
 
 def catalog_document(root: Path, scenes: list[dict], signatures: dict[str, list[str]], status: str) -> dict:
@@ -128,20 +145,150 @@ def iter_rasters(root: Path):
                 yield path
 
 
+def find_gdalinfo() -> Path | None:
+    """Find GDAL on PATH or in the standard OSGeo4W installation."""
+    on_path = shutil.which("gdalinfo")
+    candidates = [Path(on_path)] if on_path else []
+    candidates.extend([Path("C:/OSGeo4W/bin/gdalinfo.exe"), Path("C:/Program Files/GDAL/gdalinfo.exe")])
+    return next((candidate for candidate in candidates if candidate.is_file()), None)
+
+
+def gdal_environment(executable: Path) -> dict[str, str]:
+    environment = os.environ.copy()
+    if executable.as_posix().lower().endswith("/osgeo4w/bin/gdalinfo.exe"):
+        root = executable.parent.parent
+        environment.update({
+            "OSGEO4W_ROOT": str(root),
+            "GDAL_DATA": str(root / "apps/gdal/share/gdal"),
+            "GDAL_DRIVER_PATH": str(root / "apps/gdal/lib/gdalplugins"),
+            "PROJ_LIB": str(root / "share/proj"),
+        })
+        environment["PATH"] = f"{root / 'bin'}{os.pathsep}{environment.get('PATH', '')}"
+    return environment
+
+
+def gdal_preview(
+    gdalinfo_executable: Path,
+    path: Path,
+    preview_dir: Path,
+    scene_id: str,
+    preview_size: int,
+    width: int | None,
+    height: int | None,
+    band_count: int,
+) -> dict:
+    """Create an overview-aware JPEG with the GDAL command-line tools."""
+    translator = gdalinfo_executable.with_name("gdal_translate.exe")
+    if not translator.is_file():
+        return {"metadata_warning": "GDAL metadata is available, but gdal_translate was not found for preview generation."}
+    preview_dir.mkdir(parents=True, exist_ok=True)
+    preview = preview_dir / f"{scene_id}.jpg"
+    temporary = preview.with_name(f".{preview.name}.{os.getpid()}.tmp")
+    if width and height and width >= height:
+        output_size = [str(preview_size), "0"]
+        out_width, out_height = preview_size, max(1, round(height * preview_size / width))
+    elif width and height:
+        output_size = ["0", str(preview_size)]
+        out_width, out_height = max(1, round(width * preview_size / height)), preview_size
+    else:
+        output_size = [str(preview_size), "0"]
+        out_width = out_height = None
+    bands = ["-b", "1"] if band_count < 3 else ["-b", "1", "-b", "2", "-b", "3"]
+    command = [
+        str(translator), "-q", "-of", "JPEG", "-ot", "Byte", "-ovr", "AUTO",
+        *bands, "-outsize", *output_size, "-scale", "-co", "QUALITY=90",
+        str(path), str(temporary),
+    ]
+    try:
+        completed = subprocess.run(
+            command,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=1800,
+            env=gdal_environment(gdalinfo_executable),
+            check=False,
+        )
+        if completed.returncode or not temporary.is_file():
+            detail = (completed.stderr or completed.stdout or "JPEG was not created").strip().splitlines()[-1]
+            raise RuntimeError(detail)
+        os.replace(temporary, preview)
+        return {
+            "preview": preview.as_posix(),
+            "preview_width": out_width,
+            "preview_height": out_height,
+        }
+    except Exception as exc:
+        return {"metadata_warning": f"Spatial metadata was extracted, but the JPEG preview failed: {exc}"}
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
+def gdal_metadata(path: Path, preview_dir: Path, scene_id: str, preview_size: int) -> dict:
+    """Read spatial metadata and create a preview through an installed GDAL."""
+    executable = find_gdalinfo()
+    if not executable:
+        return {"metadata_status": "basic", "metadata_warning": "Install Rasterio or GDAL for CRS and footprint extraction."}
+    try:
+        completed = subprocess.run(
+            [str(executable), "-json", str(path)],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=180,
+            env=gdal_environment(executable),
+            check=False,
+        )
+        if completed.returncode:
+            detail = (completed.stderr or completed.stdout).strip().splitlines()[-1]
+            raise RuntimeError(detail)
+        metadata = json.loads(completed.stdout)
+        width, height = metadata.get("size", [None, None])
+        bands = metadata.get("bands", [])
+        wgs84 = metadata.get("wgs84Extent")
+        result = {
+            "metadata_status": "geospatial" if wgs84 else "basic",
+            "width": width,
+            "height": height,
+            "band_count": len(bands),
+            "dtype": bands[0].get("type") if bands else None,
+            "crs_wkt": metadata.get("coordinateSystem", {}).get("wkt"),
+        }
+        if wgs84 and wgs84.get("type") == "Polygon":
+            ring = wgs84.get("coordinates", [[]])[0]
+            if len(ring) >= 3:
+                result.update({
+                    "footprint": wgs84,
+                    "footprint_crs": "EPSG:4326",
+                    "bounds": [
+                        min(point[0] for point in ring), min(point[1] for point in ring),
+                        max(point[0] for point in ring), max(point[1] for point in ring),
+                    ],
+                })
+        if result["metadata_status"] != "geospatial":
+            result["metadata_warning"] = "GDAL opened the raster but did not report a WGS84 footprint."
+        preview_result = gdal_preview(
+            executable, path, preview_dir, scene_id, preview_size,
+            width, height, len(bands),
+        )
+        result.update(preview_result)
+        return result
+    except Exception as exc:
+        status = "unsupported" if path.suffix.lower() == ".ecw" else "error"
+        return {
+            "metadata_status": status,
+            "metadata_warning": f"GDAL could not extract spatial metadata: {exc}",
+        }
+
+
 def raster_metadata(path: Path, preview_dir: Path, scene_id: str, preview_size: int) -> dict:
     try:
         import rasterio
         from rasterio.enums import Resampling
     except ImportError:
-        if path.suffix.lower() == ".ecw":
-            return {
-                "metadata_status": "unsupported",
-                "metadata_warning": (
-                    "ECW file discovered. Install Rasterio with an ECW-enabled GDAL build "
-                    "to extract CRS, footprints, and JPEG previews."
-                ),
-            }
-        return {"metadata_status": "basic", "metadata_warning": "Install the geo extra for CRS, footprint, and preview generation."}
+        return gdal_metadata(path, preview_dir, scene_id, preview_size)
 
     result: dict = {"metadata_status": "geospatial"}
     try:
@@ -231,7 +378,7 @@ def build(root: Path, output: Path, preview_dir: Path, cache_path: Path, preview
             if old.get(rel, {}).get("cache_key") == cache_key:
                 scene = dict(old[rel]["scene"])
                 progress(f"Cache hit: {rel}")
-                if scene.get("metadata_status") != "geospatial":
+                if scene.get("metadata_status") != "geospatial" or not scene.get("preview"):
                     progress(f"Retrying metadata/preview extraction: {rel}")
                     scene.update(raster_metadata(path, preview_dir, scene["id"], preview_size))
             else:
@@ -250,7 +397,19 @@ def build(root: Path, output: Path, preview_dir: Path, cache_path: Path, preview
         cache[rel] = {"cache_key": cache_key, "scene": scene}
         checkpoint_cache[rel] = cache[rel]
         write_json_atomic(cache_path, checkpoint_cache)
-        write_json_atomic(partial_output, catalog_document(root, scenes, signatures, "partial"))
+        try:
+            # The browser/dev server may briefly lock this non-critical UI copy
+            # on Windows. The durable cache above remains the resume checkpoint.
+            write_json_atomic(
+                partial_output,
+                catalog_document(root, scenes, signatures, "partial"),
+                retries=3,
+            )
+        except PermissionError:
+            progress(
+                f"Warning: partial catalog is locked; continuing because the "
+                f"resume cache is safely saved: {partial_output}"
+            )
         percent_complete = (index / total * 100) if total else 100
         progress(f"Progress: {index}/{total} files complete ({percent_complete:.1f}%)")
         progress(f"Checkpoint saved: {len(scenes)} scene(s)")

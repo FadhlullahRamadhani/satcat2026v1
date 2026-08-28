@@ -9,6 +9,7 @@
 
 /* Real map surface: OSM remains fixed while footprint clicks open image popups. */
 .map-stage{isolation:isolate;background:#17242c;transition:none}
+.map-wrap{position:relative;min-width:0;min-height:0;overflow:hidden}.map-wrap>.map-stage{width:100%;height:100%}
 .map-stage:after{display:none}
 .map-stage .leaflet-pane,.map-stage .leaflet-control{z-index:auto}
 .map-stage .leaflet-control-container{position:relative;z-index:800}
@@ -22,6 +23,9 @@
 .scene-map-popup span{color:#9fb0b9;font-size:11px}
 .map-preview-button{height:34px;border:1px solid #b8e72e;border-radius:4px;background:#14252d;color:#b8e72e;font-size:11px;font-weight:700;cursor:pointer}
 .map-preview-button:hover{background:#b8e72e;color:#07131d}
+.footprint-legend{position:absolute;z-index:900;top:12px;right:12px;display:flex;gap:6px;padding:6px;border:1px solid rgba(55,72,82,.85);border-radius:6px;background:rgba(7,19,29,.9);box-shadow:0 4px 16px rgba(0,0,0,.3)}.footprint-legend span,.footprint-legend button{height:28px;display:flex;align-items:center;gap:6px;padding:0 9px;border:0;border-radius:4px;background:transparent;color:#c7d4da;font-size:10px;white-space:nowrap}.footprint-legend button{cursor:pointer}.footprint-legend button:hover{background:rgba(255,177,54,.12)}.footprint-legend i,.footprint-status:before{width:8px;height:8px;display:inline-block;border-radius:50%;content:""}.footprint-legend .available i,.scene-card.has-footprint .footprint-status:before{background:#21bde8;box-shadow:0 0 0 3px rgba(33,189,232,.16)}.footprint-legend .unavailable i,.scene-card.no-footprint .footprint-status:before{background:#ffb136;box-shadow:0 0 0 3px rgba(255,177,54,.16)}.footprint-legend .unavailable{color:#ffd28a}
+.footprint-status{position:absolute;z-index:2;left:45px;top:12px;height:22px!important;display:flex!important;align-items:center;gap:6px;padding:0 7px!important;border-radius:3px;background:rgba(5,14,20,.82);color:#d4e1e6!important;font-size:9px!important}.scene-card.has-footprint{border-bottom:3px solid #21bde8}.scene-card.no-footprint{border-bottom:3px solid #ffb136}.scene-card.no-footprint .footprint-status{color:#ffd28a!important}
+.map-notice{position:fixed;z-index:2800;left:50%;top:92px;transform:translateX(-50%);width:min(540px,calc(100vw - 32px));display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #d88d1c;border-radius:7px;background:#2a1d0b;color:#ffe1ad;box-shadow:0 12px 36px rgba(0,0,0,.5)}.map-notice>svg{flex:0 0 auto;color:#ffb136}.map-notice span{flex:1;font-size:12px;line-height:1.45}.map-notice button{display:grid;place-items:center;padding:4px;border:0;background:none;color:#ffe1ad;cursor:pointer}.location-panel.unavailable{color:#ffb136}.location-panel.unavailable strong{color:#ffd28a}
 .card-preview-button{position:absolute;z-index:2;left:11px;top:11px;width:28px;height:28px;display:grid;place-items:center;border:1px solid #dbe8ed;border-radius:4px;background:rgba(5,14,20,.78);color:#fff;cursor:pointer}
 .card-preview-button:hover{color:#07131d;background:#b8e72e;border-color:#b8e72e}
 .lightbox{position:fixed;z-index:3000;inset:0;display:grid;place-items:center;padding:28px;background:rgba(1,7,11,.88);backdrop-filter:blur(5px)}
@@ -31,3 +35,4 @@
 .lightbox-image{display:grid;place-items:center;min-height:0;padding:18px;background:#02070a}.lightbox-image img{display:block;max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.5)}
 .lightbox-actions{border-top:1px solid #2e414d}.lightbox-actions span,.lightbox-actions button{display:flex;align-items:center;gap:7px}.lightbox-actions span{color:#9fb0b9;font-size:11px}.lightbox-actions button{height:36px;padding:0 14px;border:1px solid #b8e72e;border-radius:4px;background:transparent;color:#b8e72e;font-size:11px;font-weight:700;cursor:pointer}
 @media(max-width:760px){.lightbox{padding:10px}.lightbox-panel{width:100%;height:88vh}.lightbox-head{align-items:flex-start}.lightbox-head strong{font-size:12px}.lightbox-actions span{display:none}}
+@media(max-width:760px){.footprint-legend{top:8px;right:8px;display:grid}.footprint-legend span,.footprint-legend button{justify-content:flex-start}.map-notice{top:76px}}
