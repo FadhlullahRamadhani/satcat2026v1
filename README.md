@@ -52,12 +52,13 @@ satcat D:/BEIJING --output site/data/catalog.json --previews site/previews --pre
 
 The scanner:
 
-- recursively finds `.tif`, `.tiff`, `.jp2`, `.img`, and `.vrt`;
+- recursively finds `.tif`, `.tiff`, `.jp2`, `.img`, `.vrt`, and `.ecw`;
 - never reads a complete large TIFF into memory;
 - creates a fast content signature from size plus the first/last 1 MiB;
 - extracts common filename tokens conservatively and leaves uncertain values null;
 - reads CRS, dimensions, bands, nodata, bounds, and a footprint when Rasterio is installed;
 - creates a high-resolution JPEG with a 4096 px long edge by default (configurable, but always greater than 3000 px), using percentile stretching and overview-aware reads;
+- catalogs ECW files even when the local GDAL build cannot decode them; an ECW-enabled GDAL/Rasterio build is required for CRS extraction, footprints, and JPEG previews;
 - reuses cached scene records when size and nanosecond modification time are unchanged;
 - reports duplicate signature groups without deleting or hiding anything.
 

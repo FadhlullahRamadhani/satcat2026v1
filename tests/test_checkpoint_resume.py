@@ -4,10 +4,20 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from satellite_catalog.cli import build
+from satellite_catalog.cli import build, iter_rasters
 
 
 class CheckpointResumeTest(unittest.TestCase):
+    def test_ecw_files_are_discovered_case_insensitively(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "nested").mkdir()
+            expected = root / "nested" / "sample.ECW"
+            expected.write_bytes(b"ecw placeholder")
+            (root / "ignore.txt").write_text("not a raster")
+
+            self.assertEqual(list(iter_rasters(root)), [expected])
+
     def test_interruption_preserves_completed_files_and_resumes(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory, "source")

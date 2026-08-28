@@ -12,7 +12,7 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 
-RASTER_EXTENSIONS = {".tif", ".tiff", ".jp2", ".img", ".vrt"}
+RASTER_EXTENSIONS = {".tif", ".tiff", ".jp2", ".img", ".vrt", ".ecw"}
 DATE_PATTERNS = [
     re.compile(r"(?<!\d)(20\d{6})[_T]?(\d{6})(?!\d)"),
     re.compile(r"(?<!\d)(20\d{2})[-_](\d{2})[-_](\d{2})(?!\d)"),
@@ -133,6 +133,14 @@ def raster_metadata(path: Path, preview_dir: Path, scene_id: str, preview_size: 
         import rasterio
         from rasterio.enums import Resampling
     except ImportError:
+        if path.suffix.lower() == ".ecw":
+            return {
+                "metadata_status": "unsupported",
+                "metadata_warning": (
+                    "ECW file discovered. Install Rasterio with an ECW-enabled GDAL build "
+                    "to extract CRS, footprints, and JPEG previews."
+                ),
+            }
         return {"metadata_status": "basic", "metadata_warning": "Install the geo extra for CRS, footprint, and preview generation."}
 
     result: dict = {"metadata_status": "geospatial"}
@@ -183,7 +191,15 @@ def raster_metadata(path: Path, preview_dir: Path, scene_id: str, preview_size: 
             result["preview_width"] = out_width
             result["preview_height"] = out_height
     except Exception as exc:
-        result.update({"metadata_status": "error", "metadata_warning": str(exc)})
+        warning = str(exc)
+        if path.suffix.lower() == ".ecw":
+            warning = (
+                "ECW file discovered, but this GDAL/Rasterio installation could not decode it. "
+                f"Install an ECW-enabled GDAL build to extract metadata and create a preview. Details: {warning}"
+            )
+            result.update({"metadata_status": "unsupported", "metadata_warning": warning})
+        else:
+            result.update({"metadata_status": "error", "metadata_warning": warning})
     return result
 
 
@@ -213,8 +229,11 @@ def build(root: Path, output: Path, preview_dir: Path, cache_path: Path, preview
         with heartbeat(f"{rel} | overall {completed_before}/{total} ({percent_before:.1f}%)"):
             cache_key = f"{stat.st_size}:{stat.st_mtime_ns}:preview-{preview_size}"
             if old.get(rel, {}).get("cache_key") == cache_key:
-                scene = old[rel]["scene"]
+                scene = dict(old[rel]["scene"])
                 progress(f"Cache hit: {rel}")
+                if scene.get("metadata_status") != "geospatial":
+                    progress(f"Retrying metadata/preview extraction: {rel}")
+                    scene.update(raster_metadata(path, preview_dir, scene["id"], preview_size))
             else:
                 signature = file_signature(path)
                 scene_id = hashlib.sha1(rel.encode("utf-8")).hexdigest()[:16]
