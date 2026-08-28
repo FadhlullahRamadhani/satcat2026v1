@@ -9,3 +9,5 @@ When implementing from a selected generated mock, treat that image as the source
 Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts/prepare-sites-build.mjs`, and `tests/sites-worker.test.mjs` intact so the same local prototype can be handed to Sites. Before a Sites handoff, run `npm run build` and `npm run test:sites`; the build must leave `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.
 
 Map behavior: use OpenStreetMap as the persistent basemap, render every available catalog footprint as a map layer, and show a scene image popup when a footprint is clicked. Selecting a footprint must never replace the basemap with the scene preview.
+
+Selection synchronization: selecting a footprint must reveal and center its scene card in the bottom strip; selecting a scene card must zoom to its georeferenced footprint; the right detail panel must always expose a clear large-preview action.
