@@ -1,0 +1,171 @@
+.results-actions,
+.view-switch,
+.table-footprint {
+  display: flex;
+  align-items: center;
+}
+
+.results-actions { gap: 14px; }
+
+.view-switch {
+  overflow: hidden;
+  border: 1px solid #344753;
+  border-radius: 5px;
+}
+
+.view-switch button {
+  width: 32px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-right: 1px solid #344753;
+  background: #0b1b27;
+  color: #91a3ad;
+  cursor: pointer;
+}
+
+.view-switch button:last-child { border-right: 0; }
+.view-switch button:hover,
+.view-switch button.active { background: #172a35; color: #b8e72e; }
+
+.workspace.rows-view {
+  grid-template-rows: minmax(300px, 1fr) 46px minmax(260px, 42vh);
+}
+
+.table-wrap {
+  min-width: 0;
+  overflow: auto;
+  background: #081721;
+  scrollbar-color: #3d4d58 transparent;
+}
+
+.catalogue-table {
+  width: 100%;
+  min-width: 1130px;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.catalogue-table th {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  padding: 9px 10px;
+  border-bottom: 1px solid #40515d;
+  background: #0d1d29;
+  color: #91a3ad;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: .045em;
+  white-space: nowrap;
+}
+
+.sort-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.sort-header svg { opacity: .3; transition: transform .15s, opacity .15s; }
+.sort-header:hover,
+.sort-header.active { color: #dce7eb; }
+.sort-header:hover svg,
+.sort-header.active svg { opacity: 1; color: #b8e72e; }
+.sort-header.asc svg { transform: rotate(180deg); }
+
+.catalogue-table th:first-child,
+.catalogue-table td:first-child { width: 42px; text-align: center; }
+
+.catalogue-table td {
+  height: 49px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #243641;
+  color: #b8c5cb;
+  white-space: nowrap;
+}
+
+.catalogue-table tbody tr { cursor: pointer; transition: background .15s; }
+.catalogue-table tbody tr:hover { background: #10232f; }
+.catalogue-table tbody tr.active { background: rgba(184,231,46,.08); box-shadow: inset 3px 0 #b8e72e; }
+.catalogue-table td strong { color: #54c6ea; font-size: 10px; font-weight: 700; }
+.catalogue-table tr.active td strong { color: #b8e72e; }
+
+.row-preview {
+  position: relative;
+  width: 54px;
+  height: 34px;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #31434e;
+  background: #10232f;
+  cursor: zoom-in;
+}
+
+.row-preview img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.row-preview svg { position: absolute; right: 2px; bottom: 2px; padding: 2px; border-radius: 2px; background: rgba(5,14,20,.78); color: #fff; }
+
+.row-select {
+  width: 18px;
+  height: 18px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #637681;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.row-select.selected { border-color: #b8e72e; background: #b8e72e; color: #07131d; }
+
+.level-badge {
+  display: inline-block;
+  min-width: 42px;
+  padding: 3px 6px;
+  border: 1px solid #3d5967;
+  border-radius: 3px;
+  color: #b8c9d0;
+  text-align: center;
+}
+
+.table-footprint { gap: 7px; }
+.table-footprint i { width: 8px; height: 8px; border-radius: 50%; }
+.table-footprint.available { color: #70d9f3; }
+.table-footprint.available i { background: #21bde8; box-shadow: 0 0 0 3px rgba(33,189,232,.14); }
+.table-footprint.unavailable { color: #ffd28a; }
+.table-footprint.unavailable i { background: #ffb136; box-shadow: 0 0 0 3px rgba(255,177,54,.14); }
+.table-empty { padding: 28px; color: #91a3ad; text-align: center; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media(max-width:760px) {
+  .results-actions > span { display: none; }
+  .workspace.rows-view { grid-template-rows: 390px 44px 310px; }
+}
+
+@media print {
+  .view-switch,
+  .table-wrap { display: none; }
+}
